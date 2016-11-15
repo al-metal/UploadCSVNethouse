@@ -25,6 +25,8 @@ namespace UploadCSVNethouse
 
         private void btnUploadCSV_Click(object sender, EventArgs e)
         {
+            string file = "naSite.csv";
+
             Properties.Settings.Default.login = tbLogin.Text;
             Properties.Settings.Default.password = tbPassword.Text;
             Properties.Settings.Default.Save();
@@ -35,7 +37,8 @@ namespace UploadCSVNethouse
                 MessageBox.Show("Проверьте правильность ввода логина/пароля!", "Ошибка");
                 return;
             }
-            string file = "naSite.csv";
+
+            nethouse.UploadCSVNethouse(cookie, file);
         }
     }
 }
