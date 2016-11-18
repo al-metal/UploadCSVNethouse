@@ -39,6 +39,7 @@ namespace UploadCSVNethouse
             }
 
             nethouse.UploadCSVNethouse(cookie, file);
+            MessageBox.Show("Загрузка завершена!", "Информация");
         }
     }
 }
